@@ -1,0 +1,19 @@
+﻿
+#pragma kernel CSBlobTracker
+
+Texture2D<float4> InputTexture;
+
+struct BlobData
+{
+	float2 center;
+	float2 size;
+	int index;
+};
+
+RWStructuredBuffer<BlobData> blobData;
+
+[numthreads(16,16,1)]
+void CSBlobTracker(uint3 id : SV_DispatchThreadID)
+{
+	
+}
